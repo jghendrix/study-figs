@@ -17,7 +17,7 @@ get_lakes <- function(bb, out_CRS) {
   withPonds <- st_difference(islands, waterpols)
   
   #Project to UTM
-  utmislandsPonds <- st_transform(withPonds, utm)
+  utmislandsPonds <- st_transform(withPonds, out_CRS)
 
   return(utmislandPonds)
   
