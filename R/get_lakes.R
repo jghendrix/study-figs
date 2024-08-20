@@ -18,10 +18,7 @@ get_lakes <- function(bb, out_CRS) {
   
   #Project to UTM
   utmislandsPonds <- st_transform(withPonds, utm)
-  
-  #Output 
-  write_sf(utmislandsPonds, 'output/fogo-island-polygons-no-ponds.gpkg')
-  
-  
+
+  return(utmislandPonds)
   
 }
