@@ -6,7 +6,7 @@ targets::tar_source('R')
 
 
 # Options -----------------------------------------------------------------
-tar_option_set(format = 'qs')
+#tar_option_set(format = 'qs')
 
 # Defining study area
 tar_list <- c(
@@ -31,14 +31,19 @@ tar_target(
 tar_target(
   lakes,
   get_lakes(bb, utm)
+),
+
+tar_target(
+  roads,
+  get_roads(bb, utm)
+),
+
+tar_target(
+  map,
+  plot_spatial(land, lakes, roads, plot_theme, palette)
 )
 )
 
 
 
 
-
-
-# Targets: all ------------------------------------------------------------
-# Automatically grab and combine all the "targets_*" lists above
-lapply(grep('targets', ls(), value = TRUE), get)
