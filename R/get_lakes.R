@@ -13,11 +13,8 @@ get_lakes <- function(bb, out_CRS) {
   # Union and combine
   waterpols <- st_union(st_combine(mpols), st_combine(pols))
   
-  # Cut water out of islands
-  withPonds <- st_difference(islands, waterpols)
-  
   #Project to UTM
-  utmislandsPonds <- st_transform(withPonds, out_CRS)
+  utmislandsPonds <- st_transform(waterpols, out_CRS)
 
   return(utmislandPonds)
   
