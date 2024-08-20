@@ -33,3 +33,8 @@ levels <- c('motorway', 'trunk', 'primary', 'secondary', 'tertiary',
             'bridleway', 'steps', 'corridor', 'path', 'sidewalk',
             'cycleway')
 roadlevels <- factor(levels, levels = levels)
+
+roadcols <- data.table(highway = c("primary", "secondary", "residential",
+                                   "service", "unclassified", "footway"))
+roadcols[, cols := gray.colors(.N, start = 0.1, end = 0.4)]
+roadpal <- roadcols[, setNames(cols, highway)]
