@@ -1,5 +1,4 @@
 # === Palette - Study area figures ----------------------------------------
-# Alec Robitaille
 
 # Water
 watercol <- '#c3e2ec'
