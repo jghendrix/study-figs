@@ -1,5 +1,3 @@
-# === Fogo Island Figure --------------------------------------------------
-
 # Theme
 themeMap <- theme(panel.border = element_rect(size = 1, fill = NA),
 									panel.background = element_rect(fill = watercol),
