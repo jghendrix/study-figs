@@ -1,4 +1,4 @@
-get_coastline <- function(bb) {
+get_coastline <- function(bb, out_CRS) {
   
   # Download osm coastlines in bbox
   coast <- opq(bb) %>%
@@ -17,5 +17,11 @@ get_coastline <- function(bb) {
   # Combine geometries and cast as sf
   islands <- st_as_sf(c(st_geometry(polys), castpolys))
   
-  return(islands)
+  # Project to given out_UTM
+  utmislands <- st_transform(islands, utm)
+ 
+  ### Output
+  write_sf(utmislands, 'output/island-polygons.gpkg')
+  
+  return(utmislands)
 }
