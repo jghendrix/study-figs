@@ -21,7 +21,8 @@ get_coastline <- function(bb, out_CRS) {
   utmislands <- st_transform(islands, utm)
  
   ### Output
-  write_sf(utmislands, 'output/island-polygons.gpkg')
+  # write_sf(utmislands, 'output/island-polygons.gpkg')
+  ## ^ Alec says this is bad, side quests of saving objects that don't remain in the targets workflow is poor form
   
   return(utmislands)
 }
