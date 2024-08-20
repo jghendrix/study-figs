@@ -18,7 +18,7 @@ get_coastline <- function(bb, out_CRS) {
   islands <- st_as_sf(c(st_geometry(polys), castpolys))
   
   # Project to given out_UTM
-  utmislands <- st_transform(islands, utm)
+  utmislands <- st_transform(islands, out_CRS)
  
   ### Output
   # write_sf(utmislands, 'output/island-polygons.gpkg')
