@@ -36,12 +36,11 @@ tar_target(
 tar_target(
   roads,
   get_roads(bb, utm)
-),
+)#,
 
-tar_target(
-  map,
-  plot_spatial(land, lakes, roads, plot_theme, palette)
-)
+#tar_target(
+#  map,
+#  plot_spatial(land, lakes, roads, plot_theme, palette)
 )
 
 
