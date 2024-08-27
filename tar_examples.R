@@ -27,3 +27,5 @@ tar_visnetwork()
 
 tar_mermaid()
 tar_glimpse()
+ # ^ all three of these let you visualize your workflow
+# tar_vinetwork(targets_only = TRUE) is a cleaner view

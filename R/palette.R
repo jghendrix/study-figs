@@ -1,7 +1,7 @@
 # === Palette - Study area figures ----------------------------------------
 
 # Water
-watercol <- '#c3e2ec'
+ watercol <- '#c3e2ec'
 streamcol <- '#7e9da7'
 streampolcol <- '#9cb4bc'
 coastcol <- '#b59f78'
