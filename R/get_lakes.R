@@ -14,7 +14,7 @@ get_lakes <- function(bb, out_CRS) {
   waterpols <- st_union(st_combine(mpols), st_combine(pols))
   
   #Project to UTM
-  utmislandsPonds <- st_transform(waterpols, out_CRS)
+  utmislandPonds <- st_transform(waterpols, out_CRS)
 
   return(utmislandPonds)
   
